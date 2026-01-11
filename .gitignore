@@ -97,3 +97,9 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Custom ignores for large binary files
+# This recursively ignores everything inside the folder,
+# but explicitly keeps all .meta files tracked for proper Unity referencing.
+Assets/_Ignore/**
+!Assets/_Ignore/**/*.meta
