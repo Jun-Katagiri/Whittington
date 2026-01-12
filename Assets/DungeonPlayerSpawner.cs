@@ -1,5 +1,6 @@
 using UnityEngine;
 using DunGen;
+using System.Collections; // Required for Coroutines
 
 public class DungeonPlayerSpawner : MonoBehaviour
 {
@@ -9,7 +10,6 @@ public class DungeonPlayerSpawner : MonoBehaviour
     void Awake()
     {
         dungeon = GetComponent<RuntimeDungeon>();
-        // Subscribe to the generation complete event
         dungeon.Generator.OnGenerationStatusChanged += OnStatusChanged;
     }
 
@@ -17,39 +17,39 @@ public class DungeonPlayerSpawner : MonoBehaviour
     {
         if (status == GenerationStatus.Complete)
         {
-            SpawnPlayer();
+            StartCoroutine(SpawnSequence());
         }
     }
 
-    void SpawnPlayer()
+    IEnumerator SpawnSequence()
     {
-        var startTile = dungeon.Generator.CurrentDungeon.MainPathTiles[0];
-        var spawnPoint = startTile.GetComponentInChildren<PlayerSpawnPoint>();
+        // 1. Wait for End of Frame to ensure DunGen geometry is physically in the world
+        yield return new WaitForEndOfFrame();
+        Physics.SyncTransforms();
 
-        if (spawnPoint != null)
+        // 2. Determine Spawn Position (Force 0,1,0 if you want simple testing)
+        // If you want to use the marker, uncomment the next line:
+        // var startTile = dungeon.Generator.CurrentDungeon.MainPathTiles[0];
+        Vector3 spawnPos = new Vector3(0f, 1.5f, 0f); // 1.5m up to clear the floor
+
+        // 3. Instantiate DISABLED to prevent "pop"
+        GameObject player = Instantiate(playerPrefab, spawnPos, Quaternion.identity);
+        
+        // 4. Find the Brain (CharacterController)
+        var controller = player.GetComponentInChildren<CharacterController>();
+        
+        if (controller != null)
         {
-            // 1. Force Unity to calculate the NEW world positions of the moved tiles
-            Physics.SyncTransforms();
-
-            Vector3 finalPos = spawnPoint.transform.position;
-            Quaternion finalRot = spawnPoint.transform.rotation;
-
-            GameObject player = Instantiate(playerPrefab, finalPos, finalRot);
-
-            // 2. IMPORTANT: The StarterAssets FPS Controller (CharacterController) 
-            // will override the transform unless you momentarily disable it.
-            var controller = player.GetComponent<CharacterController>();
-            if (controller != null)
-            {
-                controller.enabled = false;
-                player.transform.position = finalPos;
-                player.transform.rotation = finalRot;
-                controller.enabled = true;
-            }
-        }
-        else
-        {
-            Debug.LogError("Player spawn point not found on start tile.");
+            controller.enabled = false; // Turn off physics
+            
+            // 5. Force Position HARD
+            player.transform.position = spawnPos;
+            
+            // 6. Wait one more physics frame to let the transform settle
+            yield return new WaitForFixedUpdate();
+            
+            controller.enabled = true; // Turn brain back on
+            Debug.Log($"[SPAWN SUCCESS] Player locked at {player.transform.position}");
         }
     }
 }
