@@ -23,21 +23,33 @@ public class DungeonPlayerSpawner : MonoBehaviour
 
     void SpawnPlayer()
     {
-        // Find the specific 'Start' tile DunGen just placed
         var startTile = dungeon.Generator.CurrentDungeon.MainPathTiles[0];
-
-        // Find our SpawnPoint marker inside that tile using the component
-        // This replaces explicit string search: transform.Find("PlayerSpawnPoint")
         var spawnPoint = startTile.GetComponentInChildren<PlayerSpawnPoint>();
 
         if (spawnPoint != null)
         {
-            Instantiate(playerPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
+            // 1. Force Unity to calculate the NEW world positions of the moved tiles
+            Physics.SyncTransforms();
+
+            Vector3 finalPos = spawnPoint.transform.position;
+            Quaternion finalRot = spawnPoint.transform.rotation;
+
+            GameObject player = Instantiate(playerPrefab, finalPos, finalRot);
+
+            // 2. IMPORTANT: The StarterAssets FPS Controller (CharacterController) 
+            // will override the transform unless you momentarily disable it.
+            var controller = player.GetComponent<CharacterController>();
+            if (controller != null)
+            {
+                controller.enabled = false;
+                player.transform.position = finalPos;
+                player.transform.rotation = finalRot;
+                controller.enabled = true;
+            }
         }
         else
         {
-            // Fallback if you forgot to add the marker
-            Instantiate(playerPrefab, startTile.transform.position + Vector3.up, Quaternion.identity);
+            Debug.LogError("Player spawn point not found on start tile.");
         }
     }
 }
