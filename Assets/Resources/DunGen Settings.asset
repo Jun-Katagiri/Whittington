@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3280338808077750608
+--- !u!114 &-8318091422101825296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Name: DunGen Settings
   m_EditorClassIdentifier: DunGen::DunGen.DunGenSettings
   BroadphaseSettings:
-    rid: 3517036699171422208
+    rid: 3517036713179086848
   BoundsCalculationsIgnoreSprites: 0
   RecalculateTileBoundsOnSave: 1
   EnableTilePooling: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 3517036699171422208
+    - rid: 3517036713179086848
       type: {class: SpatialHashBroadphaseSettings, ns: DunGen.Collision, asm: DunGen}
       data:
         CellSize: 40
