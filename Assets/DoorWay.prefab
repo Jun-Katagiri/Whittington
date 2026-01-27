@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &949428100892955486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8702738357921835842}
+  - component: {fileID: 4683577296506092902}
+  m_Layer: 0
+  m_Name: DoorWay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8702738357921835842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949428100892955486}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -2.5, y: 0.5, z: -4.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &4683577296506092902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949428100892955486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a188f8ee195cf4cb8b2fdccd193b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DunGen::DunGen.Doorway
+  DoorPrefabPriority: 0
+  AvoidRotatingDoorPrefab: 0
+  DoorPrefabPositionOffset: {x: 0, y: 1, z: 0}
+  DoorPrefabRotationOffset: {x: 0, y: -90, z: 0}
+  ConnectorPrefabWeights:
+  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+    Weight: 1
+  ConnectorSceneObjects: []
+  AvoidRotatingBlockerPrefab: 0
+  BlockerPrefabPositionOffset: {x: 0, y: 1, z: 0}
+  BlockerPrefabRotationOffset: {x: 0, y: 0, z: 0}
+  BlockerPrefabWeights:
+  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+    Weight: 1
+  BlockerSceneObjects: []
+  Tags:
+    Tags: []
+  socketGroup_obsolete: -1
+  doorPrefabs_obsolete: []
+  blockerPrefabs_obsolete: []
+  socket: {fileID: -8318091422101825296, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
+  doorPrefabInstance: {fileID: 0}
+  doorComponent: {fileID: 0}
+  tile: {fileID: 0}
+  connectedDoorway: {fileID: 0}
+  hideConditionalObjects: 0
+  spawnedBlockerPrefab: {fileID: 0}
+  fileVersion: 1
