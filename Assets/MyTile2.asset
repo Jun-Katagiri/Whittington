@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: DunGen::DunGen.TileSet
   TileWeights:
     Weights:
-    - Value: {fileID: 3166507416351401670, guid: bb7e7a1f8ebf7a8459a2865e0affccc0, type: 3}
+    - Value: {fileID: 4722922510034377738, guid: 5a2d238668db4454791af0595770d485, type: 3}
       MainPathWeight: 1
       BranchPathWeight: 1
       DepthWeightScale:
@@ -41,5 +41,5 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      TileSet: {fileID: 0}
+      TileSet: {fileID: 11400000}
   LockPrefabs: []

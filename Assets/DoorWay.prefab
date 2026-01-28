@@ -46,14 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: DunGen::DunGen.Doorway
   DoorPrefabPriority: 0
   AvoidRotatingDoorPrefab: 0
-  DoorPrefabPositionOffset: {x: 0, y: 1, z: 0}
-  DoorPrefabRotationOffset: {x: 0, y: -90, z: 0}
+  DoorPrefabPositionOffset: {x: 0.5, y: 1, z: 0}
+  DoorPrefabRotationOffset: {x: 0, y: 90, z: 0}
   ConnectorPrefabWeights:
   - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
     Weight: 1
   ConnectorSceneObjects: []
   AvoidRotatingBlockerPrefab: 0
-  BlockerPrefabPositionOffset: {x: 0, y: 1, z: 0}
+  BlockerPrefabPositionOffset: {x: 0, y: 1, z: -0.01}
   BlockerPrefabRotationOffset: {x: 0, y: 0, z: 0}
   BlockerPrefabWeights:
   - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}

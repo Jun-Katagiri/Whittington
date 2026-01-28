@@ -5,6 +5,8 @@ public class GhostCamera : MonoBehaviour
 {
     public float moveSpeed = 10f;
     public float mouseSensitivity = 0.5f; // 感度調整
+    public float interactDistance = 3f;
+    public LayerMask interactMask = ~0;
 
     private float rotationX = 0f;
     private float rotationY = 0f;
@@ -22,6 +24,16 @@ public class GhostCamera : MonoBehaviour
     void Update()
     {
         // --- 新しい Input System での書き方 ---
+
+        // ドアを開ける（E / 左クリック）
+        if (Keyboard.current != null && Keyboard.current.fKey.wasPressedThisFrame)
+        {
+            TryInteract();
+        }
+        else if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            TryInteract();
+        }
 
         // マウス視点移動
         if (Mouse.current != null)
@@ -50,6 +62,15 @@ public class GhostCamera : MonoBehaviour
 
             Vector3 move = transform.right * moveX + transform.up * moveY + transform.forward * moveZ;
             transform.position += move * moveSpeed * Time.deltaTime;
+        }
+    }
+
+    void TryInteract()
+    {
+        var ray = new Ray(transform.position, transform.forward);
+        if (Physics.Raycast(ray, out var hit, interactDistance, interactMask, QueryTriggerInteraction.Ignore))
+        {
+            hit.transform.GetComponentInParent<DoorInteractable>()?.Interact();
         }
     }
 }
