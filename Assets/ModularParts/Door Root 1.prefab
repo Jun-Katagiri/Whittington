@@ -359,7 +359,6 @@ GameObject:
   - component: {fileID: 945071800362492075}
   - component: {fileID: 8952763138165517639}
   - component: {fileID: 1288989741838929656}
-  - component: {fileID: 6426580137098935404}
   m_Layer: 0
   m_Name: 'The Bathroom Door '
   m_TagString: Untagged
@@ -469,22 +468,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6103971423881738651}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf83af385c3d8f5458d3d4a1c6b27a09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoorInteractable
-  door: {fileID: 6426580137098935404}
---- !u!114 &6426580137098935404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6103971423881738651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d1347c7af88d5e4baa22ec52ae1d712, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InwardOnlyDoor
+  m_EditorClassIdentifier: Assembly-CSharp::DoorInteractable
   pivot: {fileID: 2307813658387029809}
   openAngle: 90
   speed: 6

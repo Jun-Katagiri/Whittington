@@ -1,16 +1,15 @@
-using UnityEngine;
-
-public class DoorInteractable : MonoBehaviour
+public interface DoorInteractable : Interactable
 {
-    [SerializeField] InwardOnlyDoor door;
+    public void Open();
+    public void Close();
 
-    void Awake()
-    {
-        if (!door) door = GetComponentInParent<InwardOnlyDoor>();
-    }
+    public void Toggle();
 
     public void Interact()
     {
-        if (door) door.Toggle();
+        Toggle();
     }
+
+
+
 }

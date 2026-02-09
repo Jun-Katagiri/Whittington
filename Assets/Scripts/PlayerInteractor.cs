@@ -6,7 +6,13 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] Camera cam;
     [SerializeField] float distance = 2.2f;
     [SerializeField] InputActionReference interactAction;
-    [SerializeField] LayerMask mask = ~0; // •K—v‚È‚ç Door ƒŒƒCƒ„‚¾‚¯‚Éi‚é
+    [SerializeField] LayerMask mask = ~0;
+    [SerializeField] float longPressSeconds = 0.45f;
+    [SerializeField] bool shortPressInteracts = true;
+    [SerializeField] bool longPressInteracts = false;
+
+    float pressStartedAt;
+    bool isPressingInteract;
 
     void Awake()
     {
@@ -19,7 +25,8 @@ public class PlayerInteractor : MonoBehaviour
         if (action == null)
             return;
 
-        action.performed += OnInteract;
+        action.started += OnInteractStarted;
+        action.canceled += OnInteractCanceled;
         action.Enable();
     }
 
@@ -29,11 +36,50 @@ public class PlayerInteractor : MonoBehaviour
         if (action == null)
             return;
 
-        action.performed -= OnInteract;
+        action.started -= OnInteractStarted;
+        action.canceled -= OnInteractCanceled;
         action.Disable();
     }
 
-    void OnInteract(InputAction.CallbackContext context)
+    void OnInteractStarted(InputAction.CallbackContext context)
+    {
+        isPressingInteract = true;
+        pressStartedAt = Time.unscaledTime;
+    }
+
+    void OnInteractCanceled(InputAction.CallbackContext context)
+    {
+        if (!isPressingInteract)
+            return;
+
+        isPressingInteract = false;
+        float pressDuration = Time.unscaledTime - pressStartedAt;
+
+        if (pressDuration >= longPressSeconds)
+            HandleLongPress(context, pressDuration);
+        else
+            HandleShortPress(context, pressDuration);
+    }
+
+    void HandleShortPress(InputAction.CallbackContext context, float pressDuration)
+    {
+        string controlPath = context.control != null ? context.control.path : "unknown";
+        Debug.Log($"Interact short press ({pressDuration:F2}s) from {controlPath}");
+
+        if (shortPressInteracts)
+            TryInteractRaycast();
+    }
+
+    void HandleLongPress(InputAction.CallbackContext context, float pressDuration)
+    {
+        string controlPath = context.control != null ? context.control.path : "unknown";
+        Debug.Log($"Interact long press ({pressDuration:F2}s) from {controlPath}");
+
+        if (longPressInteracts)
+            TryInteractRaycast();
+    }
+
+    void TryInteractRaycast()
     {
         if (!cam)
             cam = Camera.main;
@@ -41,26 +87,19 @@ public class PlayerInteractor : MonoBehaviour
         if (!cam)
             return;
 
-        //if (Physics.Raycast(cam.transform.position, cam.transform.forward, out var hit, distance, mask))
-        //{
-        //    var it = hit.collider.GetComponentInParent<DoorInteractable>();
-        //    if (it)
-        //    {
-        //        it.Interact();
-        //    }
-        //}
-
         var ray = new Ray(cam.transform.position, cam.transform.forward);
-        if (Physics.Raycast(ray, out var hit2, 3f))
+        if (Physics.Raycast(ray, out var hit, distance, mask))
         {
-            Debug.Log("Hit: " + hit2.collider.name);
-            hit2.transform.GetComponentInParent<DoorInteractable>()?.Interact();
-        }
+            Debug.Log("Hit: " + hit.collider.name);
 
+            var interactable =
+                hit.collider.GetComponent<DoorInteractable>() ??
+                hit.collider.GetComponentInParent<DoorInteractable>() ??
+                hit.collider.GetComponentInChildren<DoorInteractable>();
+
+            Debug.Log($"Interactable: {(interactable != null ? interactable.GetType().Name : "null")}");
+
+            interactable?.Interact();
+        }
     }
 }
-
-
-
-
-
