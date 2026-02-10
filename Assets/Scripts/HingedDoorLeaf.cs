@@ -1,13 +1,15 @@
 using UnityEngine;
 
-public class HingedDoor : Door
+public class HingedDoorLeaf : DoorLeaf
 {
+    protected bool isOpen = false;
 
-
+    public override bool IsOpen => isOpen;
 
     [SerializeField] Transform pivot;
     [SerializeField] float openAngle = 90f; // inward direction (fixed)
     [SerializeField] float speed = 6f;
+
 
 
     bool hasCachedRotations;
@@ -35,8 +37,9 @@ public class HingedDoor : Door
         pivot.localRotation = Quaternion.Slerp(pivot.localRotation, target, Time.deltaTime * speed);
     }
 
-    public void Toggle()
+    public override void Toggle()
     {
+
         // debug log
         Debug.Log($"[HingedDoor] Toggle called on {name}, pivot={(pivot ? pivot.name : "null")}, hingeIsOpen={isOpen}");
 
@@ -46,23 +49,21 @@ public class HingedDoor : Door
             Open();
     }
 
-    public void Toggle_d()
-    {
-        Debug.Log($"[Door] Toggle called on {name}, pivot={(pivot ? pivot.name : "null")}, hingeIsOpen={isOpen}");
-        isOpen = !isOpen;
-    }
 
 
-    public void Open()
+
+    public override void Open()
     {
         if (!pivot) pivot = transform;
 
-        if (!hasCachedRotations || !isOpen)
+        // Cache once unless explicitly invalidated elsewhere.
+        // Re-caching while transitioning can shift the closed baseline.
+        if (!hasCachedRotations)
             CacheRotations();
 
         isOpen = true;
     }
-    public void Close() => isOpen = false;
+    public override void Close() => isOpen = false;
 
     void CacheRotations()
     {
@@ -72,4 +73,3 @@ public class HingedDoor : Door
     }
 
 }
-

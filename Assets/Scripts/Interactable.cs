@@ -1,4 +1,9 @@
+using System.Collections.Generic;
 public interface Interactable
 {
-    public void Interact();
+    public List<Command> GetCommands();
+    public Command GetPrimaryCommand();
+
+    public void ExecuteCommand(Command command);
+
 }

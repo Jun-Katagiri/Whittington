@@ -8,8 +8,8 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] InputActionReference interactAction;
     [SerializeField] LayerMask mask = ~0;
     [SerializeField] float longPressSeconds = 0.45f;
-    [SerializeField] bool shortPressInteracts = true;
-    [SerializeField] bool longPressInteracts = false;
+    // [SerializeField] bool shortPressInteracts = true;
+    // [SerializeField] bool longPressInteracts = false;
 
     float pressStartedAt;
     bool isPressingInteract;
@@ -56,30 +56,14 @@ public class PlayerInteractor : MonoBehaviour
         float pressDuration = Time.unscaledTime - pressStartedAt;
 
         if (pressDuration >= longPressSeconds)
-            HandleLongPress(context, pressDuration);
+            TryInteract(true);
         else
-            HandleShortPress(context, pressDuration);
+            TryInteract(false);
     }
 
-    void HandleShortPress(InputAction.CallbackContext context, float pressDuration)
-    {
-        string controlPath = context.control != null ? context.control.path : "unknown";
-        Debug.Log($"Interact short press ({pressDuration:F2}s) from {controlPath}");
 
-        if (shortPressInteracts)
-            TryInteractRaycast();
-    }
 
-    void HandleLongPress(InputAction.CallbackContext context, float pressDuration)
-    {
-        string controlPath = context.control != null ? context.control.path : "unknown";
-        Debug.Log($"Interact long press ({pressDuration:F2}s) from {controlPath}");
-
-        if (longPressInteracts)
-            TryInteractRaycast();
-    }
-
-    void TryInteractRaycast()
+    void TryInteract(bool isLongPress)
     {
         if (!cam)
             cam = Camera.main;
@@ -92,14 +76,15 @@ public class PlayerInteractor : MonoBehaviour
         {
             Debug.Log("Hit: " + hit.collider.name);
 
-            var interactable =
-                hit.collider.GetComponent<DoorInteractable>() ??
-                hit.collider.GetComponentInParent<DoorInteractable>() ??
-                hit.collider.GetComponentInChildren<DoorInteractable>();
+            if (!isLongPress)
+            {
+                var interactableShort =
+                    hit.collider.GetComponent<Interactable>();
+                Debug.Log($"InteractableShort: {(interactableShort != null ? interactableShort.GetType().Name : "null")}");
+                interactableShort.ExecuteCommand(interactableShort.GetPrimaryCommand());
+            }
 
-            Debug.Log($"Interactable: {(interactable != null ? interactable.GetType().Name : "null")}");
 
-            interactable?.Interact();
         }
     }
 }

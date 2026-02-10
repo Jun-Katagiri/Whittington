@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 945071800362492075}
   - component: {fileID: 8952763138165517639}
   - component: {fileID: 1288989741838929656}
+  - component: {fileID: 8021034998576595001}
   m_Layer: 0
   m_Name: 'The Bathroom Door '
   m_TagString: Untagged
@@ -474,6 +475,23 @@ MonoBehaviour:
   pivot: {fileID: 2307813658387029809}
   openAngle: 90
   speed: 6
+--- !u!114 &8021034998576595001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103971423881738651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f29b6bba5a9e2f345baced40630b6d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorController
+  commands:
+  - kind: 2
+    label: Toggle
+  locks: []
+  doorLeaf: {fileID: 1288989741838929656}
 --- !u!1 &8124539737842784863
 GameObject:
   m_ObjectHideFlags: 0

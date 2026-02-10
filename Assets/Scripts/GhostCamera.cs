@@ -1,10 +1,10 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // ‚±‚±‚ªd—v
+using UnityEngine.InputSystem; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½v
 
 public class GhostCamera : MonoBehaviour
 {
     public float moveSpeed = 10f;
-    public float mouseSensitivity = 0.5f; // Š´“x’²®
+    public float mouseSensitivity = 0.5f; // ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½
     public float interactDistance = 3f;
     public LayerMask interactMask = ~0;
 
@@ -23,9 +23,9 @@ public class GhostCamera : MonoBehaviour
 
     void Update()
     {
-        // --- V‚µ‚¢ Input System ‚Å‚Ì‘‚«•û ---
+        // --- ï¿½Vï¿½ï¿½ï¿½ï¿½ Input System ï¿½Å‚Ìï¿½ï¿½ï¿½ï¿½ï¿½ ---
 
-        // ƒhƒA‚ğŠJ‚¯‚éiE / ¶ƒNƒŠƒbƒNj
+        // ï¿½hï¿½Aï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½ï¿½iE / ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½bï¿½Nï¿½j
         if (Keyboard.current != null && Keyboard.current.fKey.wasPressedThisFrame)
         {
             TryInteract();
@@ -35,7 +35,7 @@ public class GhostCamera : MonoBehaviour
             TryInteract();
         }
 
-        // ƒ}ƒEƒX‹“_ˆÚ“®
+        // ï¿½}ï¿½Eï¿½Xï¿½ï¿½ï¿½_ï¿½Ú“ï¿½
         if (Mouse.current != null)
         {
             Vector2 mouseDelta = Mouse.current.delta.ReadValue();
@@ -46,7 +46,7 @@ public class GhostCamera : MonoBehaviour
             transform.localRotation = Quaternion.Euler(rotationX, rotationY, 0);
         }
 
-        // ƒL[ƒ{[ƒhˆÚ“®
+        // ï¿½Lï¿½[ï¿½{ï¿½[ï¿½hï¿½Ú“ï¿½
         if (Keyboard.current != null)
         {
             float moveX = 0;
@@ -57,8 +57,8 @@ public class GhostCamera : MonoBehaviour
             if (Keyboard.current.sKey.isPressed) moveZ = -1;
             if (Keyboard.current.aKey.isPressed) moveX = -1;
             if (Keyboard.current.dKey.isPressed) moveX = 1;
-            if (Keyboard.current.eKey.isPressed) moveY = 1; // ã¸
-            if (Keyboard.current.qKey.isPressed) moveY = -1; // ‰º~
+            if (Keyboard.current.eKey.isPressed) moveY = 1; // ï¿½ã¸
+            if (Keyboard.current.qKey.isPressed) moveY = -1; // ï¿½ï¿½ï¿½~
 
             Vector3 move = transform.right * moveX + transform.up * moveY + transform.forward * moveZ;
             transform.position += move * moveSpeed * Time.deltaTime;
@@ -70,7 +70,7 @@ public class GhostCamera : MonoBehaviour
         var ray = new Ray(transform.position, transform.forward);
         if (Physics.Raycast(ray, out var hit, interactDistance, interactMask, QueryTriggerInteraction.Ignore))
         {
-            hit.transform.GetComponentInParent<DoorInteractable>()?.Interact();
+            hit.transform.GetComponentInParent<DoorController>()?.Toggle();
         }
     }
 }
