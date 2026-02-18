@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 using DunGen;
 
@@ -8,32 +8,30 @@ public class DoorController : MonoBehaviour, Interactable
     [SerializeField] List<Command> commands = new();
     [SerializeField] DoorLockLatch latch;
     [SerializeField] DoorLockBoltIndicator boltIndicator;
-
-
     [SerializeField] DoorLeaf doorLeaf;
+
+    int lastToggleFrame = -1;
 
     void Awake()
     {
         doorLeaf ??= GetComponentInChildren<DoorLeaf>();
         if (doorLeaf == null)
             Debug.LogError($"[DoorController] No DoorLeaf found on {name}");
+
         boltIndicator ??= GetComponentInChildren<DoorLockBoltIndicator>();
         if (boltIndicator == null)
             Debug.LogError($"[DoorController] No DoorLockBoltIndicator found on {name}");
+
         OnLatchStateChanged(latch != null && latch.IsLocked);
     }
 
     public void OnLatchStateChanged(bool isLocked)
     {
-        // Update bolt indicator visibility
         if (boltIndicator != null)
-        {
             boltIndicator.SetOccupied(isLocked);
-        }
     }
 
     bool CanOpen() => latch == null || !latch.IsLocked;
-
 
     public List<Command> GetCommands()
     {
@@ -42,13 +40,10 @@ public class DoorController : MonoBehaviour, Interactable
 
     public Command GetPrimaryCommand()
     {
-
         if (commands.Count > 0)
             return commands[0];
         return null;
-
     }
-
 
     public void Toggle()
     {
@@ -58,14 +53,7 @@ public class DoorController : MonoBehaviour, Interactable
             return;
         }
 
-        if (GetPrimaryCommand() != null)
-        {
-            doorLeaf.Toggle();
-        }
-        else
-        {
-            Debug.LogWarning($"[DoorController] Toggle called but no primary command on {name}");
-        }
+        TryToggleDoor();
     }
 
     public void ExecuteCommand(Command command)
@@ -91,8 +79,7 @@ public class DoorController : MonoBehaviour, Interactable
                 doorLeaf.Close();
                 break;
             case Command.Kind.Toggle:
-                if (!CanOpen()) return;
-                doorLeaf.Toggle();
+                TryToggleDoor();
                 break;
             case Command.Kind.Lock:
                 Debug.Log("Lock command should be sent to latch, not door");
@@ -106,6 +93,21 @@ public class DoorController : MonoBehaviour, Interactable
         }
     }
 
+    void TryToggleDoor()
+    {
+        if (lastToggleFrame == Time.frameCount)
+            return;
+        lastToggleFrame = Time.frameCount;
 
+        if (!CanOpen())
+        {
+            doorLeaf.PlayFailedToggleSound();
+            return;
+        }
 
+        if (GetPrimaryCommand() != null)
+            doorLeaf.Toggle();
+        else
+            Debug.LogWarning($"[DoorController] Toggle called but no primary command on {name}");
+    }
 }
