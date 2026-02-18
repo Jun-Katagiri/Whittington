@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9578428, guid: a0c77498b2479e747b2ef80f0fd0ccbf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6971255116040934145, guid: a0c77498b2479e747b2ef80f0fd0ccbf, type: 3}
       propertyPath: audioSource
       value: 
@@ -237,6 +241,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: e6b0c6b128aea544b9a117204aa22664, type: 3}
     m_RemovedComponents:
     - {fileID: 6971255116040934145, guid: a0c77498b2479e747b2ef80f0fd0ccbf, type: 3}
+    - {fileID: 11424806, guid: a0c77498b2479e747b2ef80f0fd0ccbf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -255,6 +260,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 123156, guid: a0c77498b2479e747b2ef80f0fd0ccbf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 204595103}
+    - targetCorrespondingSourceObject: {fileID: 109168, guid: a0c77498b2479e747b2ef80f0fd0ccbf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1985377181}
+    - targetCorrespondingSourceObject: {fileID: 120846, guid: a0c77498b2479e747b2ef80f0fd0ccbf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1126277606}
   m_SourcePrefab: {fileID: 100100000, guid: a0c77498b2479e747b2ef80f0fd0ccbf, type: 3}
 --- !u!43 &54998813
 Mesh:
@@ -1111,6 +1122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorLockLatch
   startsLocked: 1
   door: {fileID: 1467986190}
+  audioSource: {fileID: 1512334224}
+  lockClip: {fileID: 8300000, guid: 05a7f514c7e533247b621db3472fc560, type: 3}
+  unlockClip: {fileID: 8300000, guid: 760228afaf5f27948ab082d5163cbaa0, type: 3}
 --- !u!65 &204595103
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13237,6 +13251,33 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 5126527961139664767, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
   m_PrefabInstance: {fileID: 1546180795}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1126277602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 120846, guid: a0c77498b2479e747b2ef80f0fd0ccbf, type: 3}
+  m_PrefabInstance: {fileID: 30417225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1126277606
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126277602}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ba52b8dda0315b64b8f89a9c8024c3e6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!43 &1132923859
 Mesh:
   m_ObjectHideFlags: 0
@@ -19011,6 +19052,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!82 &1366018272 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8212760, guid: a0c77498b2479e747b2ef80f0fd0ccbf, type: 3}
+  m_PrefabInstance: {fileID: 30417225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1371036069
 Mesh:
   m_ObjectHideFlags: 0
@@ -36969,6 +37015,30 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1985377174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 109168, guid: a0c77498b2479e747b2ef80f0fd0ccbf, type: 3}
+  m_PrefabInstance: {fileID: 30417225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1985377181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985377174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e5c10431b5cb8478299f826eec60dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToiletFlushController
+  soundEffect: {fileID: 1366018272}
+  animatorObject: {fileID: 1126277606}
+  waterAnimationName: Toilet Flush
+  commandLabel: Flush
+  minPitch: 0.9
+  maxPitch: 1.1
+  cooldownDuration: 5
 --- !u!43 &2041268394
 Mesh:
   m_ObjectHideFlags: 0
