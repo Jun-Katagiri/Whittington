@@ -1,4 +1,4 @@
-﻿%YAML 1.1
+%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!29 &1
 OcclusionCullingSettings:
@@ -2312,6 +2312,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &403099614
 MonoBehaviour:
@@ -5503,6 +5504,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1347c7af88d5e4baa22ec52ae1d712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InwardOnlyDoor
+  isOpen: 0
+  audioSource: {fileID: 0}
+  openClip: {fileID: 0}
+  closeClip: {fileID: 0}
+  lockedClip: {fileID: 0}
+  unlockedClip: {fileID: 0}
+  failedOpenClip: {fileID: 0}
   pivot: {fileID: 0}
   openAngle: 90
   speed: 6
@@ -5730,14 +5738,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753736915}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
@@ -9645,6 +9653,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 4294967295
+  longPressSeconds: 0.45
 --- !u!43 &1312621921
 Mesh:
   m_ObjectHideFlags: 0
@@ -10842,6 +10851,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &1423137138
 MonoBehaviour:
@@ -13150,6 +13160,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &1700326472
 MonoBehaviour:
@@ -14699,6 +14710,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1790528904
 MeshFilter:
@@ -15767,6 +15779,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1939471065
 MeshFilter:
@@ -17879,6 +17892,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1347c7af88d5e4baa22ec52ae1d712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InwardOnlyDoor
+  isOpen: 0
+  audioSource: {fileID: 0}
+  openClip: {fileID: 0}
+  closeClip: {fileID: 0}
+  lockedClip: {fileID: 0}
+  unlockedClip: {fileID: 0}
+  failedOpenClip: {fileID: 0}
   pivot: {fileID: 0}
   openAngle: 90
   speed: 6

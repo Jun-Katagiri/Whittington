@@ -3629,6 +3629,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &469511455
 MeshFilter:
@@ -6024,14 +6025,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753736915}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
@@ -9410,6 +9411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bathroom
       objectReference: {fileID: 0}
+    - target: {fileID: 159372, guid: 0b6dce2b146215642be8b6c8d0a06916, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 159640, guid: 0b6dce2b146215642be8b6c8d0a06916, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -12347,6 +12352,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1049891354
 MeshFilter:
@@ -26854,6 +26860,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1438789035
 MeshFilter:
@@ -33411,6 +33418,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1641098826
 MeshFilter:
@@ -39919,6 +39927,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2089696417
 MeshFilter:
@@ -41986,6 +41995,10 @@ PrefabInstance:
     - target: {fileID: 4075615370137671880, guid: ad24c115ded6812409759ed3c7cb10c4, type: 3}
       propertyPath: m_VersionIndex
       value: 1405
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090589843525425427, guid: ad24c115ded6812409759ed3c7cb10c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4091097614186431725, guid: ad24c115ded6812409759ed3c7cb10c4, type: 3}
       propertyPath: m_Mesh
