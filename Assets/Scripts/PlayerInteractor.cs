@@ -79,9 +79,10 @@ public class PlayerInteractor : MonoBehaviour
             if (!isLongPress)
             {
                 var interactableShort =
-                    hit.collider.GetComponent<Interactable>();
+                    hit.collider.GetComponentInParent<Interactable>();
                 Debug.Log($"InteractableShort: {(interactableShort != null ? interactableShort.GetType().Name : "null")}");
-                interactableShort.ExecuteCommand(interactableShort.GetPrimaryCommand());
+                if (interactableShort != null)
+                    interactableShort.ExecuteCommand(interactableShort.GetPrimaryCommand());
             }
 
 
