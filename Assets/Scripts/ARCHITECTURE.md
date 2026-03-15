@@ -1,3 +1,6 @@
+#THIS IS A SAMPLE FILE!!
+#DO NOT READ
+
 4つの図は：
 
 フローチャート (graph TD) — 全体構成・モジュール間の依存関係

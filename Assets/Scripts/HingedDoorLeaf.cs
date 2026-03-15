@@ -14,6 +14,8 @@ public class HingedDoorLeaf : DoorLeaf
     {
         if (!pivot) pivot = transform;
         CacheRotations();
+        if (IsOpen)
+            pivot.localRotation = openRot;
     }
 
     void Update()
