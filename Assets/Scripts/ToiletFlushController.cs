@@ -107,4 +107,25 @@ public class ToiletFlushController : MonoBehaviour, Interactable
         else
             commands[0] = primaryCommand;
     }
+
+#if UNITY_EDITOR
+    void OnValidate()
+    {
+        // Warns you in the console if you assigned an AudioSource from another stall
+        if (soundEffect != null && !soundEffect.transform.IsChildOf(transform))
+        {
+            Debug.LogWarning($"[ToiletFlushController] The assigned soundEffect on '{name}' belongs to a different hierarchy. Did you assign the wrong 'Toilet Sound'?", this);
+        }
+    }
+
+    void Reset()
+    {
+        // Auto-assigns the references so you don't have to drag and drop them manually
+        if (soundEffect == null)
+            soundEffect = GetComponentInChildren<AudioSource>();
+
+        if (animatorObject == null)
+            animatorObject = GetComponentInChildren<Animator>();
+    }
+#endif
 }

@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class UrinalFlushController : MonoBehaviour, Interactable
 {
@@ -94,19 +97,41 @@ public class UrinalFlushController : MonoBehaviour, Interactable
         }
 
         // Shared Material Setup
+        // NOTE: このマテリアルはメモリ上にのみ存在し、アセットとして保存されていない。
+        // DunGen等でランタイムInstantiateするとシェーダー参照が失われマゼンタになるため、
+        // 使用する場合は Assets/Materials/ に .mat ファイルとして保存すること。
         Material mat = null;
-        var shader = Shader.Find("Universal Render Pipeline/Particles/Unlit");
-        if (shader != null)
+#if UNITY_EDITOR
+        string matDir = "Assets/Materials";
+        string matPath = $"{matDir}/Procedural_Water_Mat.mat";
+
+        if (!AssetDatabase.IsValidFolder(matDir))
         {
-            mat = new Material(shader);
-            mat.name = "Procedural_Water_Mat";
-            mat.SetFloat("_Surface", 1.0f); // Transparent
-            mat.SetFloat("_Blend", 0.0f);   // Alpha
-            mat.SetFloat("_ZWrite", 0.0f);  // Off
-            mat.renderQueue = 3000;
-            mat.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");
-            mat.SetOverrideTag("RenderType", "Transparent");
+            AssetDatabase.CreateFolder("Assets", "Materials");
         }
+
+        mat = AssetDatabase.LoadAssetAtPath<Material>(matPath);
+        if (mat == null)
+        {
+            var shader = Shader.Find("Universal Render Pipeline/Particles/Unlit");
+            if (shader != null)
+            {
+                mat = new Material(shader);
+                mat.name = "Procedural_Water_Mat";
+                mat.SetFloat("_Surface", 1.0f); // Transparent
+                mat.SetFloat("_Blend", 0.0f);   // Alpha
+                mat.SetFloat("_ZWrite", 0.0f);  // Off
+                mat.renderQueue = 3000;
+                mat.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");
+                mat.SetOverrideTag("RenderType", "Transparent");
+
+                AssetDatabase.CreateAsset(mat, matPath);
+                AssetDatabase.SaveAssets();
+            }
+        }
+#else
+        Debug.LogWarning("Material generation is only supported in the Editor.");
+#endif
 
         if (flushParticles == null)
         {

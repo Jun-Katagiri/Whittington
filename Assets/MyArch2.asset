@@ -15,7 +15,6 @@ MonoBehaviour:
   StraightenChance: 0
   TileSets:
   - {fileID: 11400000, guid: b6abc1a547be7e349898d1395dae4e48, type: 2}
-  - {fileID: 11400000, guid: 493c9ae1c3674c24fa03a454ac7f7a19, type: 2}
   BranchStartTileSets: []
   BranchStartType: 0
   BranchCapTileSets: []

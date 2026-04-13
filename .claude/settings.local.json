@@ -8,7 +8,9 @@
       "Bash(grep -r ad24c115ded6812409759ed3c7cb10c4 c:unityWhittingtonAssets*.meta)",
       "Bash(ls -la \"c:\\\\unity\\\\Whittington\\\\Assets\"/*.meta)",
       "Bash(find c:unityWhittingtonAssets -name *.fbx -o -name *.blend -o -name *.obj)",
-      "Bash(grep -r 0cacf4c76adebb048a9d5d644dc22bfa c:unityWhittingtonAssets --include=*.meta)"
+      "Bash(grep -r 0cacf4c76adebb048a9d5d644dc22bfa c:unityWhittingtonAssets --include=*.meta)",
+      "Bash(find \"c:\\\\unity\\\\Whittington\\\\Assets\" -name \"UrinalFlushController.cs.meta\" -exec cat {} \\\\;)",
+      "Bash(python -c ':*)"
     ]
   }
 }

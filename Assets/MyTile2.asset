@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: DunGen::DunGen.TileSet
   TileWeights:
     Weights:
-    - Value: {fileID: 4722922510034377738, guid: 5a2d238668db4454791af0595770d485, type: 3}
+    - Value: {fileID: 869822053707105968, guid: 3494cc5679473364b89424ea2d9799a7, type: 3}
       MainPathWeight: 1
       BranchPathWeight: 1
       DepthWeightScale:
