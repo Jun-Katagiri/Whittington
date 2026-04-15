@@ -2,19 +2,15 @@ using UnityEngine;
 using System.Collections;
 public class DoorLockBoltIndicator : MonoBehaviour
 {
-
-    [SerializeField] Transform pivot;
-    [SerializeField] float occupiedZ = 0f; // ボルトが使用中の位置のZ回転角
-    [SerializeField] float vacantZ = 180f; // ボルトが空きの位置のZ回転角
+    [SerializeField] float occupiedZ = 0f;
+    [SerializeField] float vacantZ = 180f;
     Quaternion baseRot;
-    [SerializeField] float rotateSpeed = 360f; // 度/秒
+    [SerializeField] float rotateSpeed = 360f;
     Coroutine co;
 
     void Awake()
     {
-        if (pivot == null)
-            pivot = transform;
-        baseRot = pivot.localRotation;
+        baseRot = transform.localRotation;
     }
 
     public void SetOccupied(bool occupied)
@@ -30,18 +26,17 @@ public class DoorLockBoltIndicator : MonoBehaviour
 
     IEnumerator RotateTo(Quaternion target)
     {
-        while (Quaternion.Angle(pivot.localRotation, target) > 0.1f)
+        while (Quaternion.Angle(transform.localRotation, target) > 0.1f)
         {
-            pivot.localRotation =
+            transform.localRotation =
                 Quaternion.RotateTowards(
-                    pivot.localRotation,
+                    transform.localRotation,
                     target,
                     rotateSpeed * Time.deltaTime
                 );
             yield return null;
         }
 
-        pivot.localRotation = target;
+        transform.localRotation = target;
     }
-
 }
