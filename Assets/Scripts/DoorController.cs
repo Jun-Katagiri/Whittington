@@ -19,8 +19,7 @@ public class DoorController : MonoBehaviour, Interactable
             Debug.LogError($"[DoorController] No DoorLeaf found on {name}");
 
         boltIndicator ??= GetComponentInChildren<DoorLockBoltIndicator>();
-        if (boltIndicator == null)
-            Debug.LogError($"[DoorController] No DoorLockBoltIndicator found on {name}");
+        // boltIndicator is optional, so no error if it's missing (e.g., entrance doors)
 
         OnLatchStateChanged(latch != null && latch.IsLocked);
     }

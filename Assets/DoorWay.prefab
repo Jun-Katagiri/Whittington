@@ -48,27 +48,88 @@ MonoBehaviour:
   AvoidRotatingDoorPrefab: 0
   DoorPrefabPositionOffset: {x: 0.5, y: 1, z: 0}
   DoorPrefabRotationOffset: {x: 0, y: 90, z: 0}
-  ConnectorPrefabWeights:
-  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
-    Weight: 1
+  ConnectorPrefabs:
+    Entries:
+    - Value: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+      MainPathWeight: 1
+      BranchPathWeight: 1
+      DepthWeightScale:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DepthScalingMode: 0
   ConnectorSceneObjects: []
   AvoidRotatingBlockerPrefab: 0
   BlockerPrefabPositionOffset: {x: 0, y: 1, z: -0.01}
   BlockerPrefabRotationOffset: {x: 0, y: 0, z: 0}
-  BlockerPrefabWeights:
-  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
-    Weight: 1
+  BlockerPrefabs:
+    Entries:
+    - Value: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+      MainPathWeight: 1
+      BranchPathWeight: 1
+      DepthWeightScale:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DepthScalingMode: 0
   BlockerSceneObjects: []
   Tags:
     Tags: []
+  LockID: -1
   socketGroup_obsolete: -1
   doorPrefabs_obsolete: []
   blockerPrefabs_obsolete: []
-  socket: {fileID: -8318091422101825296, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
+  ConnectorPrefabWeights:
+  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+    Weight: 1
+  BlockerPrefabWeights:
+  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+    Weight: 1
+  socket: {fileID: 605148162261453185, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
   doorPrefabInstance: {fileID: 0}
   doorComponent: {fileID: 0}
   tile: {fileID: 0}
   connectedDoorway: {fileID: 0}
   hideConditionalObjects: 0
   spawnedBlockerPrefab: {fileID: 0}
-  fileVersion: 1
+  fileVersion: 2

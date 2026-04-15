@@ -90,6 +90,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &2439304111795554741
 Animator:
@@ -201,6 +202,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &259449300359891083
 GameObject:
@@ -292,6 +294,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &311097801775771043
 GameObject:
@@ -382,6 +385,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &334949064909574066
 GameObject:
@@ -545,30 +549,91 @@ MonoBehaviour:
   AvoidRotatingDoorPrefab: 0
   DoorPrefabPositionOffset: {x: 0.5, y: 1, z: 0}
   DoorPrefabRotationOffset: {x: 0, y: 90, z: 0}
-  ConnectorPrefabWeights:
-  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
-    Weight: 1
+  ConnectorPrefabs:
+    Entries:
+    - Value: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+      MainPathWeight: 1
+      BranchPathWeight: 1
+      DepthWeightScale:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DepthScalingMode: 0
   ConnectorSceneObjects: []
   AvoidRotatingBlockerPrefab: 0
   BlockerPrefabPositionOffset: {x: 0, y: 1, z: 0}
   BlockerPrefabRotationOffset: {x: 0, y: 0, z: 0}
-  BlockerPrefabWeights:
-  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
-    Weight: 1
+  BlockerPrefabs:
+    Entries:
+    - Value: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+      MainPathWeight: 1
+      BranchPathWeight: 1
+      DepthWeightScale:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DepthScalingMode: 0
   BlockerSceneObjects: []
   Tags:
     Tags: []
+  LockID: -1
   socketGroup_obsolete: -1
   doorPrefabs_obsolete: []
   blockerPrefabs_obsolete: []
-  socket: {fileID: -8318091422101825296, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
+  ConnectorPrefabWeights:
+  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+    Weight: 1
+  BlockerPrefabWeights:
+  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+    Weight: 1
+  socket: {fileID: 605148162261453185, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
   doorPrefabInstance: {fileID: 0}
   doorComponent: {fileID: 0}
   tile: {fileID: 0}
   connectedDoorway: {fileID: 0}
   hideConditionalObjects: 0
   spawnedBlockerPrefab: {fileID: 0}
-  fileVersion: 1
+  fileVersion: 2
 --- !u!1 &702918325870074940
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +724,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &710513126490392601
 GameObject:
@@ -751,6 +817,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &856078647872456655
 GameObject:
@@ -840,6 +907,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1066301529091412065
 GameObject:
@@ -929,6 +997,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1171994387537202131
 GameObject:
@@ -1055,6 +1124,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &6177333292375388832
 Animator:
@@ -1167,6 +1237,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &7361064682798486102
 Animator:
@@ -1238,30 +1309,91 @@ MonoBehaviour:
   AvoidRotatingDoorPrefab: 0
   DoorPrefabPositionOffset: {x: 0.5, y: 1, z: 0}
   DoorPrefabRotationOffset: {x: 0, y: 90, z: 0}
-  ConnectorPrefabWeights:
-  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
-    Weight: 1
+  ConnectorPrefabs:
+    Entries:
+    - Value: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+      MainPathWeight: 1
+      BranchPathWeight: 1
+      DepthWeightScale:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DepthScalingMode: 0
   ConnectorSceneObjects: []
   AvoidRotatingBlockerPrefab: 0
   BlockerPrefabPositionOffset: {x: 0, y: 1, z: 0}
   BlockerPrefabRotationOffset: {x: 0, y: 0, z: 0}
-  BlockerPrefabWeights:
-  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
-    Weight: 1
+  BlockerPrefabs:
+    Entries:
+    - Value: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+      MainPathWeight: 1
+      BranchPathWeight: 1
+      DepthWeightScale:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DepthScalingMode: 0
   BlockerSceneObjects: []
   Tags:
     Tags: []
+  LockID: -1
   socketGroup_obsolete: -1
   doorPrefabs_obsolete: []
   blockerPrefabs_obsolete: []
-  socket: {fileID: -8318091422101825296, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
+  ConnectorPrefabWeights:
+  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+    Weight: 1
+  BlockerPrefabWeights:
+  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+    Weight: 1
+  socket: {fileID: 605148162261453185, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
   doorPrefabInstance: {fileID: 0}
   doorComponent: {fileID: 0}
   tile: {fileID: 0}
   connectedDoorway: {fileID: 0}
   hideConditionalObjects: 0
   spawnedBlockerPrefab: {fileID: 0}
-  fileVersion: 1
+  fileVersion: 2
 --- !u!1 &1554483045951709695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,6 +1483,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &747650558446892170
 Animator:
@@ -1462,6 +1595,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1797022021449993232
 GameObject:
@@ -1554,6 +1688,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &8804084829472810107
 Animator:
@@ -1706,6 +1841,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &1757870400683435931
 MeshCollider:
@@ -1857,6 +1993,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2108877303582885229
 GameObject:
@@ -1906,30 +2043,91 @@ MonoBehaviour:
   AvoidRotatingDoorPrefab: 0
   DoorPrefabPositionOffset: {x: 0.5, y: 1, z: 0}
   DoorPrefabRotationOffset: {x: 0, y: 90, z: 0}
-  ConnectorPrefabWeights:
-  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
-    Weight: 1
+  ConnectorPrefabs:
+    Entries:
+    - Value: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+      MainPathWeight: 1
+      BranchPathWeight: 1
+      DepthWeightScale:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DepthScalingMode: 0
   ConnectorSceneObjects: []
   AvoidRotatingBlockerPrefab: 0
   BlockerPrefabPositionOffset: {x: 0, y: 1, z: 0}
   BlockerPrefabRotationOffset: {x: 0, y: 0, z: 0}
-  BlockerPrefabWeights:
-  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
-    Weight: 1
+  BlockerPrefabs:
+    Entries:
+    - Value: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+      MainPathWeight: 1
+      BranchPathWeight: 1
+      DepthWeightScale:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DepthScalingMode: 0
   BlockerSceneObjects: []
   Tags:
     Tags: []
+  LockID: -1
   socketGroup_obsolete: -1
   doorPrefabs_obsolete: []
   blockerPrefabs_obsolete: []
-  socket: {fileID: -8318091422101825296, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
+  ConnectorPrefabWeights:
+  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+    Weight: 1
+  BlockerPrefabWeights:
+  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+    Weight: 1
+  socket: {fileID: 605148162261453185, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
   doorPrefabInstance: {fileID: 0}
   doorComponent: {fileID: 0}
   tile: {fileID: 0}
   connectedDoorway: {fileID: 0}
   hideConditionalObjects: 0
   spawnedBlockerPrefab: {fileID: 0}
-  fileVersion: 1
+  fileVersion: 2
 --- !u!1 &2131146583785333224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,6 +2274,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2275909289962990465
 GameObject:
@@ -2167,6 +2366,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &9107108096471605523
 Animator:
@@ -2279,6 +2479,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &2605079829743931080
 Animator:
@@ -2392,6 +2593,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &1519496295833526243
 Animator:
@@ -2654,6 +2856,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &5127574513355302599
 MeshCollider:
@@ -2807,6 +3010,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3494041976629114175
 GameObject:
@@ -2897,6 +3101,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &4339225371640458737
 Animator:
@@ -2968,30 +3173,91 @@ MonoBehaviour:
   AvoidRotatingDoorPrefab: 0
   DoorPrefabPositionOffset: {x: 0.5, y: 1, z: 0}
   DoorPrefabRotationOffset: {x: 0, y: 90, z: 0}
-  ConnectorPrefabWeights:
-  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
-    Weight: 1
+  ConnectorPrefabs:
+    Entries:
+    - Value: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+      MainPathWeight: 1
+      BranchPathWeight: 1
+      DepthWeightScale:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DepthScalingMode: 0
   ConnectorSceneObjects: []
   AvoidRotatingBlockerPrefab: 0
   BlockerPrefabPositionOffset: {x: 0, y: 1, z: 0}
   BlockerPrefabRotationOffset: {x: 0, y: 0, z: 0}
-  BlockerPrefabWeights:
-  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
-    Weight: 1
+  BlockerPrefabs:
+    Entries:
+    - Value: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+      MainPathWeight: 1
+      BranchPathWeight: 1
+      DepthWeightScale:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DepthScalingMode: 0
   BlockerSceneObjects: []
   Tags:
     Tags: []
+  LockID: -1
   socketGroup_obsolete: -1
   doorPrefabs_obsolete: []
   blockerPrefabs_obsolete: []
-  socket: {fileID: -8318091422101825296, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
+  ConnectorPrefabWeights:
+  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+    Weight: 1
+  BlockerPrefabWeights:
+  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+    Weight: 1
+  socket: {fileID: 605148162261453185, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
   doorPrefabInstance: {fileID: 0}
   doorComponent: {fileID: 0}
   tile: {fileID: 0}
   connectedDoorway: {fileID: 0}
   hideConditionalObjects: 0
   spawnedBlockerPrefab: {fileID: 0}
-  fileVersion: 1
+  fileVersion: 2
 --- !u!1 &3732979073362910156
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,6 +3346,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3757028730068770712
 GameObject:
@@ -3258,30 +3525,91 @@ MonoBehaviour:
   AvoidRotatingDoorPrefab: 0
   DoorPrefabPositionOffset: {x: 0.5, y: 1, z: 0}
   DoorPrefabRotationOffset: {x: 0, y: 90, z: 0}
-  ConnectorPrefabWeights:
-  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
-    Weight: 1
+  ConnectorPrefabs:
+    Entries:
+    - Value: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+      MainPathWeight: 1
+      BranchPathWeight: 1
+      DepthWeightScale:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DepthScalingMode: 0
   ConnectorSceneObjects: []
   AvoidRotatingBlockerPrefab: 0
   BlockerPrefabPositionOffset: {x: 0, y: 1, z: 0}
   BlockerPrefabRotationOffset: {x: 0, y: 0, z: 0}
-  BlockerPrefabWeights:
-  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
-    Weight: 1
+  BlockerPrefabs:
+    Entries:
+    - Value: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+      MainPathWeight: 1
+      BranchPathWeight: 1
+      DepthWeightScale:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DepthScalingMode: 0
   BlockerSceneObjects: []
   Tags:
     Tags: []
+  LockID: -1
   socketGroup_obsolete: -1
   doorPrefabs_obsolete: []
   blockerPrefabs_obsolete: []
-  socket: {fileID: -8318091422101825296, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
+  ConnectorPrefabWeights:
+  - GameObject: {fileID: 8124539737842784863, guid: dc3085a19f3392441bf50e04bb212891, type: 3}
+    Weight: 1
+  BlockerPrefabWeights:
+  - GameObject: {fileID: 6261553608986121719, guid: d5d437ddd1f4a924d8e5e9642810b279, type: 3}
+    Weight: 1
+  socket: {fileID: 605148162261453185, guid: aba2f073b47090b4f9303bd000f7f61d, type: 2}
   doorPrefabInstance: {fileID: 0}
   doorComponent: {fileID: 0}
   tile: {fileID: 0}
   connectedDoorway: {fileID: 0}
   hideConditionalObjects: 0
   spawnedBlockerPrefab: {fileID: 0}
-  fileVersion: 1
+  fileVersion: 2
 --- !u!1 &4090589843525425427
 GameObject:
   m_ObjectHideFlags: 0
@@ -3370,6 +3698,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4520143340319438020
 GameObject:
@@ -3493,6 +3822,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5172831608805360489
 GameObject:
@@ -3582,6 +3912,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5443913314498601001
 GameObject:
@@ -3671,6 +4002,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5479053798416861284
 GameObject:
@@ -3796,6 +4128,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &7371732150466312654
 Animator:
@@ -3907,6 +4240,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5916226410683477815
 GameObject:
@@ -3996,6 +4330,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5973455640552167320
 GameObject:
@@ -4119,6 +4454,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6368560403561269194
 GameObject:
@@ -4211,6 +4547,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &1861326954910982752
 Animator:
@@ -4322,6 +4659,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6461504090138022702
 GameObject:
@@ -4411,6 +4749,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6524151833319029964
 GameObject:
@@ -4500,6 +4839,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6589698120652757733
 GameObject:
@@ -4590,6 +4930,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6592562720604955381
 GameObject:
@@ -4679,6 +5020,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6975254244450899419
 GameObject:
@@ -4928,7 +5270,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 389
+  m_VersionIndex: 392
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5004,6 +5346,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &6917478727776717873
 MeshFilter:
@@ -5123,6 +5466,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7145028809818867611
 GameObject:
@@ -5213,6 +5557,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &5593177905126002700
 Animator:
@@ -5456,6 +5801,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7740012587143423373
 GameObject:
@@ -5580,6 +5926,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7789484852416263126
 GameObject:
@@ -5799,6 +6146,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &6331725356140253233
 Animator:
@@ -5913,6 +6261,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8196970706260114634
 GameObject:
@@ -6002,6 +6351,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8350845883153796630
 GameObject:
@@ -6093,6 +6443,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &5386089478161096469
 Animator:
@@ -6204,6 +6555,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8506247793832462227
 GameObject:
@@ -6294,6 +6646,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &56955244805674707
 Animator:
@@ -6405,6 +6758,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8703342997708877823
 GameObject:
@@ -6494,6 +6848,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8786370168458399151
 GameObject:
@@ -6583,6 +6938,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8809587993215491769
 GameObject:
@@ -6707,6 +7063,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &9007846722772226732
 GameObject:
@@ -6804,6 +7161,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &3137701083829355288
 MeshCollider:
@@ -6955,6 +7313,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &9179201081835547122
 GameObject:
@@ -7044,6 +7403,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &36095261387655144
 PrefabInstance:
@@ -7227,7 +7587,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3573803552193485725, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_VersionIndex
-      value: 1311
+      value: 1314
       objectReference: {fileID: 0}
     - target: {fileID: 5363175568595423393, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_Name
@@ -7239,11 +7599,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5390170035037506702, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_VersionIndex
-      value: 1315
+      value: 1318
       objectReference: {fileID: 0}
     - target: {fileID: 6792818570051825384, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_VersionIndex
-      value: 1330
+      value: 1333
       objectReference: {fileID: 0}
     - target: {fileID: 8350733386237915959, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7353,15 +7713,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2389050800818899805, guid: cd9c4c521be7b8f4198f36453c4d6c40, type: 3}
       propertyPath: m_VersionIndex
-      value: 1326
+      value: 1329
       objectReference: {fileID: 0}
     - target: {fileID: 5103217385251908295, guid: cd9c4c521be7b8f4198f36453c4d6c40, type: 3}
       propertyPath: m_VersionIndex
-      value: 1341
+      value: 1344
       objectReference: {fileID: 0}
     - target: {fileID: 5112440286568783451, guid: cd9c4c521be7b8f4198f36453c4d6c40, type: 3}
       propertyPath: m_VersionIndex
-      value: 1322
+      value: 1325
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7407,7 +7767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3431557508228920604, guid: 3ed4cc60ea042c74da3f055372365235, type: 3}
       propertyPath: m_VersionIndex
-      value: 1337
+      value: 1340
       objectReference: {fileID: 0}
     - target: {fileID: 3431557508228920604, guid: 3ed4cc60ea042c74da3f055372365235, type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -7547,7 +7907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5105936571045080168, guid: 3ed4cc60ea042c74da3f055372365235, type: 3}
       propertyPath: m_VersionIndex
-      value: 1333
+      value: 1336
       objectReference: {fileID: 0}
     - target: {fileID: 5105936571045080168, guid: 3ed4cc60ea042c74da3f055372365235, type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -7719,7 +8079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675560553948855958, guid: 3ed4cc60ea042c74da3f055372365235, type: 3}
       propertyPath: m_VersionIndex
-      value: 1352
+      value: 1355
       objectReference: {fileID: 0}
     - target: {fileID: 7675560553948855958, guid: 3ed4cc60ea042c74da3f055372365235, type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -7971,7 +8331,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3573803552193485725, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_VersionIndex
-      value: 1311
+      value: 1314
       objectReference: {fileID: 0}
     - target: {fileID: 5363175568595423393, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_Name
@@ -7983,11 +8343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5390170035037506702, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_VersionIndex
-      value: 1315
+      value: 1318
       objectReference: {fileID: 0}
     - target: {fileID: 6792818570051825384, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_VersionIndex
-      value: 1330
+      value: 1333
       objectReference: {fileID: 0}
     - target: {fileID: 8350733386237915959, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8093,7 +8453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862235796776973198, guid: 427cae5c0e415764d91cbba32a489bee, type: 3}
       propertyPath: m_VersionIndex
-      value: 1980
+      value: 1983
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8159,7 +8519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862235796776973198, guid: 427cae5c0e415764d91cbba32a489bee, type: 3}
       propertyPath: m_VersionIndex
-      value: 1980
+      value: 1983
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8283,7 +8643,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 28287280297359145, guid: 2d593c24b8e44f749827926e2e906e47, type: 3}
       propertyPath: m_VersionIndex
-      value: 1340
+      value: 1343
       objectReference: {fileID: 0}
     - target: {fileID: 1126786165070655480, guid: 2d593c24b8e44f749827926e2e906e47, type: 3}
       propertyPath: m_Name
@@ -8295,11 +8655,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5007503430786825379, guid: 2d593c24b8e44f749827926e2e906e47, type: 3}
       propertyPath: m_VersionIndex
-      value: 1355
+      value: 1358
       objectReference: {fileID: 0}
     - target: {fileID: 7575272536508165725, guid: 2d593c24b8e44f749827926e2e906e47, type: 3}
       propertyPath: m_VersionIndex
-      value: 1336
+      value: 1339
       objectReference: {fileID: 0}
     - target: {fileID: 8694145593316483648, guid: 2d593c24b8e44f749827926e2e906e47, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8565,7 +8925,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 28287280297359145, guid: 2d593c24b8e44f749827926e2e906e47, type: 3}
       propertyPath: m_VersionIndex
-      value: 1340
+      value: 1343
       objectReference: {fileID: 0}
     - target: {fileID: 1126786165070655480, guid: 2d593c24b8e44f749827926e2e906e47, type: 3}
       propertyPath: m_Name
@@ -8577,11 +8937,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5007503430786825379, guid: 2d593c24b8e44f749827926e2e906e47, type: 3}
       propertyPath: m_VersionIndex
-      value: 1355
+      value: 1358
       objectReference: {fileID: 0}
     - target: {fileID: 7575272536508165725, guid: 2d593c24b8e44f749827926e2e906e47, type: 3}
       propertyPath: m_VersionIndex
-      value: 1336
+      value: 1339
       objectReference: {fileID: 0}
     - target: {fileID: 8694145593316483648, guid: 2d593c24b8e44f749827926e2e906e47, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8687,7 +9047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862235796776973198, guid: 427cae5c0e415764d91cbba32a489bee, type: 3}
       propertyPath: m_VersionIndex
-      value: 1980
+      value: 1983
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8709,7 +9069,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3573803552193485725, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_VersionIndex
-      value: 1311
+      value: 1314
       objectReference: {fileID: 0}
     - target: {fileID: 5363175568595423393, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_Name
@@ -8721,11 +9081,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5390170035037506702, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_VersionIndex
-      value: 1315
+      value: 1318
       objectReference: {fileID: 0}
     - target: {fileID: 6792818570051825384, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_VersionIndex
-      value: 1330
+      value: 1333
       objectReference: {fileID: 0}
     - target: {fileID: 8350733386237915959, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8831,7 +9191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862235796776973198, guid: 427cae5c0e415764d91cbba32a489bee, type: 3}
       propertyPath: m_VersionIndex
-      value: 1980
+      value: 1983
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9101,7 +9461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862235796776973198, guid: 427cae5c0e415764d91cbba32a489bee, type: 3}
       propertyPath: m_VersionIndex
-      value: 1980
+      value: 1983
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9171,15 +9531,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2389050800818899805, guid: cd9c4c521be7b8f4198f36453c4d6c40, type: 3}
       propertyPath: m_VersionIndex
-      value: 1326
+      value: 1329
       objectReference: {fileID: 0}
     - target: {fileID: 5103217385251908295, guid: cd9c4c521be7b8f4198f36453c4d6c40, type: 3}
       propertyPath: m_VersionIndex
-      value: 1341
+      value: 1344
       objectReference: {fileID: 0}
     - target: {fileID: 5112440286568783451, guid: cd9c4c521be7b8f4198f36453c4d6c40, type: 3}
       propertyPath: m_VersionIndex
-      value: 1322
+      value: 1325
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9245,7 +9605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862235796776973198, guid: 427cae5c0e415764d91cbba32a489bee, type: 3}
       propertyPath: m_VersionIndex
-      value: 1980
+      value: 1983
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9291,7 +9651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3431557508228920604, guid: 3ed4cc60ea042c74da3f055372365235, type: 3}
       propertyPath: m_VersionIndex
-      value: 1337
+      value: 1340
       objectReference: {fileID: 0}
     - target: {fileID: 3431557508228920604, guid: 3ed4cc60ea042c74da3f055372365235, type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -9431,7 +9791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5105936571045080168, guid: 3ed4cc60ea042c74da3f055372365235, type: 3}
       propertyPath: m_VersionIndex
-      value: 1333
+      value: 1336
       objectReference: {fileID: 0}
     - target: {fileID: 5105936571045080168, guid: 3ed4cc60ea042c74da3f055372365235, type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -9603,7 +9963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675560553948855958, guid: 3ed4cc60ea042c74da3f055372365235, type: 3}
       propertyPath: m_VersionIndex
-      value: 1352
+      value: 1355
       objectReference: {fileID: 0}
     - target: {fileID: 7675560553948855958, guid: 3ed4cc60ea042c74da3f055372365235, type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -9801,15 +10161,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2389050800818899805, guid: cd9c4c521be7b8f4198f36453c4d6c40, type: 3}
       propertyPath: m_VersionIndex
-      value: 1326
+      value: 1329
       objectReference: {fileID: 0}
     - target: {fileID: 5103217385251908295, guid: cd9c4c521be7b8f4198f36453c4d6c40, type: 3}
       propertyPath: m_VersionIndex
-      value: 1341
+      value: 1344
       objectReference: {fileID: 0}
     - target: {fileID: 5112440286568783451, guid: cd9c4c521be7b8f4198f36453c4d6c40, type: 3}
       propertyPath: m_VersionIndex
-      value: 1322
+      value: 1325
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9875,7 +10235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862235796776973198, guid: 427cae5c0e415764d91cbba32a489bee, type: 3}
       propertyPath: m_VersionIndex
-      value: 1980
+      value: 1983
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10015,15 +10375,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2389050800818899805, guid: cd9c4c521be7b8f4198f36453c4d6c40, type: 3}
       propertyPath: m_VersionIndex
-      value: 1326
+      value: 1329
       objectReference: {fileID: 0}
     - target: {fileID: 5103217385251908295, guid: cd9c4c521be7b8f4198f36453c4d6c40, type: 3}
       propertyPath: m_VersionIndex
-      value: 1341
+      value: 1344
       objectReference: {fileID: 0}
     - target: {fileID: 5112440286568783451, guid: cd9c4c521be7b8f4198f36453c4d6c40, type: 3}
       propertyPath: m_VersionIndex
-      value: 1322
+      value: 1325
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10045,7 +10405,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3573803552193485725, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_VersionIndex
-      value: 1311
+      value: 1314
       objectReference: {fileID: 0}
     - target: {fileID: 5363175568595423393, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_Name
@@ -10057,11 +10417,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5390170035037506702, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_VersionIndex
-      value: 1315
+      value: 1318
       objectReference: {fileID: 0}
     - target: {fileID: 6792818570051825384, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_VersionIndex
-      value: 1330
+      value: 1333
       objectReference: {fileID: 0}
     - target: {fileID: 8350733386237915959, guid: 86720840c471011419dd87336f878538, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10237,7 +10597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862235796776973198, guid: 427cae5c0e415764d91cbba32a489bee, type: 3}
       propertyPath: m_VersionIndex
-      value: 1980
+      value: 1983
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
