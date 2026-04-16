@@ -10,7 +10,11 @@
       "Bash(find c:unityWhittingtonAssets -name *.fbx -o -name *.blend -o -name *.obj)",
       "Bash(grep -r 0cacf4c76adebb048a9d5d644dc22bfa c:unityWhittingtonAssets --include=*.meta)",
       "Bash(find \"c:\\\\unity\\\\Whittington\\\\Assets\" -name \"UrinalFlushController.cs.meta\" -exec cat {} \\\\;)",
-      "Bash(python -c ':*)"
+      "Bash(python -c ':*)",
+      "Bash(python -m markitdown \"C:\\\\Users\\\\jun\\\\iCloudDrive\\\\セタニー\\\\０４１６\\\\13号館512会議室_詳細マニュアル0325.pptx\")",
+      "Bash(python -m markitdown \"C:/Users/jun/iCloudDrive/セタニー/０４１６/13号館512会議室_詳細マニュアル0325.pptx\")",
+      "Bash(pip install:*)",
+      "Bash(python -c \"import sys; print\\(sys.stdin.buffer.read\\(\\).decode\\('utf-8', errors='replace'\\)\\)\")"
     ]
   }
 }
