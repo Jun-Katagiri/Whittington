@@ -14,7 +14,8 @@
       "Bash(python -m markitdown \"C:\\\\Users\\\\jun\\\\iCloudDrive\\\\セタニー\\\\０４１６\\\\13号館512会議室_詳細マニュアル0325.pptx\")",
       "Bash(python -m markitdown \"C:/Users/jun/iCloudDrive/セタニー/０４１６/13号館512会議室_詳細マニュアル0325.pptx\")",
       "Bash(pip install:*)",
-      "Bash(python -c \"import sys; print\\(sys.stdin.buffer.read\\(\\).decode\\('utf-8', errors='replace'\\)\\)\")"
+      "Bash(python -c \"import sys; print\\(sys.stdin.buffer.read\\(\\).decode\\('utf-8', errors='replace'\\)\\)\")",
+      "Bash(find \"C:\\\\unity\\\\Whittington\\\\Assets\" -name \"*.prefab\" -exec grep -l \"Cinemachine\\\\|CameraTarget\" {} \\\\;)"
     ]
   }
 }

@@ -416,7 +416,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395323, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_Follow
-      value: 
+      value:
+      objectReference: {fileID: 5242107653240477475}
+    - target: {fileID: 1296692423026685162, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
+      propertyPath: Target.TrackingTarget
+      value:
       objectReference: {fileID: 5242107653240477475}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
