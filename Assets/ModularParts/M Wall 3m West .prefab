@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 3666573292976658210}
   - component: {fileID: 1963081301661611429}
   - component: {fileID: 2505479781127742507}
-  - component: {fileID: 8358088812572822522}
+  - component: {fileID: 8948348084821984834}
   m_Layer: 6
   m_Name: M Wall Top (1)
   m_TagString: Untagged
@@ -197,54 +197,54 @@ MonoBehaviour:
   - m_Vertices: 0b0000000e00000012000000
   m_SharedTextures: []
   m_Positions:
-  - {x: -1.5, y: -0.5, z: 0.5}
-  - {x: 1.5, y: -0.5, z: 0.5}
-  - {x: -1.5, y: 0.5, z: 0.5}
-  - {x: 1.5, y: 0.5, z: 0.5}
-  - {x: 1.5, y: -0.5, z: 0.5}
-  - {x: 1.5, y: -0.5, z: -0.5}
-  - {x: 1.5, y: 0.5, z: 0.5}
-  - {x: 1.5, y: 0.5, z: -0.5}
-  - {x: 1.5, y: -0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: -0.5}
-  - {x: 1.5, y: 0.5, z: -0.5}
-  - {x: -1.5, y: 0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: 0.5}
-  - {x: -1.5, y: 0.5, z: -0.5}
-  - {x: -1.5, y: 0.5, z: 0.5}
-  - {x: -1.5, y: 0.5, z: 0.5}
-  - {x: 1.5, y: 0.5, z: 0.5}
-  - {x: -1.5, y: 0.5, z: -0.5}
-  - {x: 1.5, y: 0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: -0.5}
-  - {x: 1.5, y: -0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: 0.5}
-  - {x: 1.5, y: -0.5, z: 0.5}
+  - {x: -2.5, y: -0.5, z: 0.5}
+  - {x: 2.5, y: -0.5, z: 0.5}
+  - {x: -2.5, y: 0.5, z: 0.5}
+  - {x: 2.5, y: 0.5, z: 0.5}
+  - {x: 2.5, y: -0.5, z: 0.5}
+  - {x: 2.5, y: -0.5, z: -0.5}
+  - {x: 2.5, y: 0.5, z: 0.5}
+  - {x: 2.5, y: 0.5, z: -0.5}
+  - {x: 2.5, y: -0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: -0.5}
+  - {x: 2.5, y: 0.5, z: -0.5}
+  - {x: -2.5, y: 0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: 0.5}
+  - {x: -2.5, y: 0.5, z: -0.5}
+  - {x: -2.5, y: 0.5, z: 0.5}
+  - {x: -2.5, y: 0.5, z: 0.5}
+  - {x: 2.5, y: 0.5, z: 0.5}
+  - {x: -2.5, y: 0.5, z: -0.5}
+  - {x: 2.5, y: 0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: -0.5}
+  - {x: 2.5, y: -0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: 0.5}
+  - {x: 2.5, y: -0.5, z: 0.5}
   m_Textures0:
-  - {x: 3, y: 0}
+  - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 3, y: 1}
+  - {x: 5, y: 1}
   - {x: 0, y: 1}
   - {x: 1, y: 0}
   - {x: 0, y: 0}
   - {x: 1, y: 1}
   - {x: 0, y: 1}
-  - {x: 3, y: 0}
+  - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 3, y: 1}
+  - {x: 5, y: 1}
   - {x: 0, y: 1}
   - {x: 1, y: 0}
   - {x: 0, y: 0}
   - {x: 1, y: 1}
   - {x: 0, y: 1}
   - {x: 0, y: 1}
-  - {x: 3, y: 1}
+  - {x: 5, y: 1}
   - {x: 0, y: 0}
-  - {x: 3, y: 0}
-  - {x: 3, y: 0}
+  - {x: 5, y: 0}
+  - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 3, y: 1}
+  - {x: 5, y: 1}
   - {x: 0, y: 1}
   m_Textures2: []
   m_Textures3: []
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1078
+  m_VersionIndex: 1574
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -302,8 +302,8 @@ MonoBehaviour:
   m_Shape:
     rid: 3517036960994295821
   m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1078
-  m_Size: {x: 3, y: 1, z: 1}
+  m_UnmodifiedMeshVersion: 1571
+  m_Size: {x: 5, y: 1, z: 1}
   m_LocalCenter: {x: 0, y: 0, z: 0}
   references:
     version: 2
@@ -336,7 +336,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 175152fccc87f284795091abaa655a77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -358,6 +358,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2505479781127742507
 MeshFilter:
@@ -367,8 +368,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3343250151347959880}
   m_Mesh: {fileID: 0}
---- !u!64 &8358088812572822522
-MeshCollider:
+--- !u!65 &8948348084821984834
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -385,10 +386,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 6, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7799301320608937197
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 1548441209183450156}
   - component: {fileID: 9026602399723650786}
   - component: {fileID: 4678958282335483425}
-  - component: {fileID: 6565339647195181168}
+  - component: {fileID: 7148939622461396487}
   m_Layer: 6
   m_Name: M Wall Bot (1)
   m_TagString: Untagged
@@ -552,54 +552,54 @@ MonoBehaviour:
   - m_Vertices: 0b0000000e00000012000000
   m_SharedTextures: []
   m_Positions:
-  - {x: -1.5, y: -0.5, z: 0.5}
-  - {x: 1.5, y: -0.5, z: 0.5}
-  - {x: -1.5, y: 0.5, z: 0.5}
-  - {x: 1.5, y: 0.5, z: 0.5}
-  - {x: 1.5, y: -0.5, z: 0.5}
-  - {x: 1.5, y: -0.5, z: -0.5}
-  - {x: 1.5, y: 0.5, z: 0.5}
-  - {x: 1.5, y: 0.5, z: -0.5}
-  - {x: 1.5, y: -0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: -0.5}
-  - {x: 1.5, y: 0.5, z: -0.5}
-  - {x: -1.5, y: 0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: 0.5}
-  - {x: -1.5, y: 0.5, z: -0.5}
-  - {x: -1.5, y: 0.5, z: 0.5}
-  - {x: -1.5, y: 0.5, z: 0.5}
-  - {x: 1.5, y: 0.5, z: 0.5}
-  - {x: -1.5, y: 0.5, z: -0.5}
-  - {x: 1.5, y: 0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: -0.5}
-  - {x: 1.5, y: -0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: 0.5}
-  - {x: 1.5, y: -0.5, z: 0.5}
+  - {x: -2.5, y: -0.5, z: 0.5}
+  - {x: 2.5, y: -0.5, z: 0.5}
+  - {x: -2.5, y: 0.5, z: 0.5}
+  - {x: 2.5, y: 0.5, z: 0.5}
+  - {x: 2.5, y: -0.5, z: 0.5}
+  - {x: 2.5, y: -0.5, z: -0.5}
+  - {x: 2.5, y: 0.5, z: 0.5}
+  - {x: 2.5, y: 0.5, z: -0.5}
+  - {x: 2.5, y: -0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: -0.5}
+  - {x: 2.5, y: 0.5, z: -0.5}
+  - {x: -2.5, y: 0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: 0.5}
+  - {x: -2.5, y: 0.5, z: -0.5}
+  - {x: -2.5, y: 0.5, z: 0.5}
+  - {x: -2.5, y: 0.5, z: 0.5}
+  - {x: 2.5, y: 0.5, z: 0.5}
+  - {x: -2.5, y: 0.5, z: -0.5}
+  - {x: 2.5, y: 0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: -0.5}
+  - {x: 2.5, y: -0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: 0.5}
+  - {x: 2.5, y: -0.5, z: 0.5}
   m_Textures0:
-  - {x: 3, y: 0}
+  - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 3, y: 1}
+  - {x: 5, y: 1}
   - {x: 0, y: 1}
   - {x: 1, y: 0}
   - {x: 0, y: 0}
   - {x: 1, y: 1}
   - {x: 0, y: 1}
-  - {x: 3, y: 0}
+  - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 3, y: 1}
+  - {x: 5, y: 1}
   - {x: 0, y: 1}
   - {x: 1, y: 0}
   - {x: 0, y: 0}
   - {x: 1, y: 1}
   - {x: 0, y: 1}
   - {x: 0, y: 1}
-  - {x: 3, y: 1}
+  - {x: 5, y: 1}
   - {x: 0, y: 0}
-  - {x: 3, y: 0}
-  - {x: 3, y: 0}
+  - {x: 5, y: 0}
+  - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 3, y: 1}
+  - {x: 5, y: 1}
   - {x: 0, y: 1}
   m_Textures2: []
   m_Textures3: []
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1074
+  m_VersionIndex: 1548
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -657,8 +657,8 @@ MonoBehaviour:
   m_Shape:
     rid: 3517036960994295821
   m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1074
-  m_Size: {x: 3, y: 1, z: 1}
+  m_UnmodifiedMeshVersion: 1545
+  m_Size: {x: 5, y: 1, z: 1}
   m_LocalCenter: {x: 0, y: 0, z: 0}
   references:
     version: 2
@@ -713,6 +713,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &4678958282335483425
 MeshFilter:
@@ -722,8 +723,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7799301320608937197}
   m_Mesh: {fileID: 0}
---- !u!64 &6565339647195181168
-MeshCollider:
+--- !u!65 &7148939622461396487
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -740,10 +741,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 6, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8852076641946336258
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 2371649165689336175}
   - component: {fileID: 435142785448121815}
   - component: {fileID: 4566710129800622304}
-  - component: {fileID: 3400681372511569580}
+  - component: {fileID: 4804308463675687691}
   m_Layer: 6
   m_Name: M Wall Mid (1)
   m_TagString: Untagged
@@ -907,54 +907,54 @@ MonoBehaviour:
   - m_Vertices: 0b0000000e00000012000000
   m_SharedTextures: []
   m_Positions:
-  - {x: -1.5, y: -0.5, z: 0.5}
-  - {x: 1.5, y: -0.5, z: 0.5}
-  - {x: -1.5, y: 0.5, z: 0.5}
-  - {x: 1.5, y: 0.5, z: 0.5}
-  - {x: 1.5, y: -0.5, z: 0.5}
-  - {x: 1.5, y: -0.5, z: -0.5}
-  - {x: 1.5, y: 0.5, z: 0.5}
-  - {x: 1.5, y: 0.5, z: -0.5}
-  - {x: 1.5, y: -0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: -0.5}
-  - {x: 1.5, y: 0.5, z: -0.5}
-  - {x: -1.5, y: 0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: 0.5}
-  - {x: -1.5, y: 0.5, z: -0.5}
-  - {x: -1.5, y: 0.5, z: 0.5}
-  - {x: -1.5, y: 0.5, z: 0.5}
-  - {x: 1.5, y: 0.5, z: 0.5}
-  - {x: -1.5, y: 0.5, z: -0.5}
-  - {x: 1.5, y: 0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: -0.5}
-  - {x: 1.5, y: -0.5, z: -0.5}
-  - {x: -1.5, y: -0.5, z: 0.5}
-  - {x: 1.5, y: -0.5, z: 0.5}
+  - {x: -2.5, y: -0.5, z: 0.5}
+  - {x: 2.5, y: -0.5, z: 0.5}
+  - {x: -2.5, y: 0.5, z: 0.5}
+  - {x: 2.5, y: 0.5, z: 0.5}
+  - {x: 2.5, y: -0.5, z: 0.5}
+  - {x: 2.5, y: -0.5, z: -0.5}
+  - {x: 2.5, y: 0.5, z: 0.5}
+  - {x: 2.5, y: 0.5, z: -0.5}
+  - {x: 2.5, y: -0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: -0.5}
+  - {x: 2.5, y: 0.5, z: -0.5}
+  - {x: -2.5, y: 0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: 0.5}
+  - {x: -2.5, y: 0.5, z: -0.5}
+  - {x: -2.5, y: 0.5, z: 0.5}
+  - {x: -2.5, y: 0.5, z: 0.5}
+  - {x: 2.5, y: 0.5, z: 0.5}
+  - {x: -2.5, y: 0.5, z: -0.5}
+  - {x: 2.5, y: 0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: -0.5}
+  - {x: 2.5, y: -0.5, z: -0.5}
+  - {x: -2.5, y: -0.5, z: 0.5}
+  - {x: 2.5, y: -0.5, z: 0.5}
   m_Textures0:
-  - {x: 3, y: 0}
+  - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 3, y: 1}
+  - {x: 5, y: 1}
   - {x: 0, y: 1}
   - {x: 1, y: 0}
   - {x: 0, y: 0}
   - {x: 1, y: 1}
   - {x: 0, y: 1}
-  - {x: 3, y: 0}
+  - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 3, y: 1}
+  - {x: 5, y: 1}
   - {x: 0, y: 1}
   - {x: 1, y: 0}
   - {x: 0, y: 0}
   - {x: 1, y: 1}
   - {x: 0, y: 1}
   - {x: 0, y: 1}
-  - {x: 3, y: 1}
+  - {x: 5, y: 1}
   - {x: 0, y: 0}
-  - {x: 3, y: 0}
-  - {x: 3, y: 0}
+  - {x: 5, y: 0}
+  - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 3, y: 1}
+  - {x: 5, y: 1}
   - {x: 0, y: 1}
   m_Textures2: []
   m_Textures3: []
@@ -992,7 +992,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1093
+  m_VersionIndex: 1567
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1012,8 +1012,8 @@ MonoBehaviour:
   m_Shape:
     rid: 3517036960994295821
   m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1093
-  m_Size: {x: 3, y: 1, z: 1}
+  m_UnmodifiedMeshVersion: 1564
+  m_Size: {x: 5, y: 1, z: 1}
   m_LocalCenter: {x: 0, y: 0, z: 0}
   references:
     version: 2
@@ -1046,7 +1046,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: f692841184a5e9441bcdf5133cf4980f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1068,6 +1068,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &4566710129800622304
 MeshFilter:
@@ -1077,8 +1078,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8852076641946336258}
   m_Mesh: {fileID: 0}
---- !u!64 &3400681372511569580
-MeshCollider:
+--- !u!65 &4804308463675687691
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1095,7 +1096,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 6, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
