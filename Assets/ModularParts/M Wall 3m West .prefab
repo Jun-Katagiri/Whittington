@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 3666573292976658210}
   - component: {fileID: 1963081301661611429}
   - component: {fileID: 2505479781127742507}
-  - component: {fileID: 8948348084821984834}
+  - component: {fileID: 8333573893850558974}
   m_Layer: 6
   m_Name: M Wall Top (1)
   m_TagString: Untagged
@@ -368,7 +368,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3343250151347959880}
   m_Mesh: {fileID: 0}
---- !u!65 &8948348084821984834
+--- !u!65 &8333573893850558974
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -387,7 +387,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6, y: 1, z: 1}
+  m_Size: {x: 5, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7799301320608937197
 GameObject:
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 1548441209183450156}
   - component: {fileID: 9026602399723650786}
   - component: {fileID: 4678958282335483425}
-  - component: {fileID: 7148939622461396487}
+  - component: {fileID: 5648129376191272461}
   m_Layer: 6
   m_Name: M Wall Bot (1)
   m_TagString: Untagged
@@ -723,7 +723,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7799301320608937197}
   m_Mesh: {fileID: 0}
---- !u!65 &7148939622461396487
+--- !u!65 &5648129376191272461
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -742,7 +742,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6, y: 1, z: 1}
+  m_Size: {x: 5, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8852076641946336258
 GameObject:
@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 2371649165689336175}
   - component: {fileID: 435142785448121815}
   - component: {fileID: 4566710129800622304}
-  - component: {fileID: 4804308463675687691}
+  - component: {fileID: 689195212994201403}
   m_Layer: 6
   m_Name: M Wall Mid (1)
   m_TagString: Untagged
@@ -1078,7 +1078,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8852076641946336258}
   m_Mesh: {fileID: 0}
---- !u!65 &4804308463675687691
+--- !u!65 &689195212994201403
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1097,5 +1097,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6, y: 1, z: 1}
+  m_Size: {x: 5, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
